@@ -1,6 +1,6 @@
 # Putasset [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 
-Upload asset to release on github.
+Upload asset to release on github. To create release use [grizzly](https://github.com/coderaiser/node-grizzly "Grizzly").
 
 ## Install
 
