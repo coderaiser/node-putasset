@@ -74,11 +74,11 @@ release(token, {
 MIT
 
 [NPMIMGURL]:                https://img.shields.io/npm/v/putasset.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/putasset/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/putasset.svg?style=flat
+[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/node-putasset/master.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/node-putasset.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]:                   https://npmjs.org/package/putasset "npm"
-[BuildStatusURL]:           https://travis-ci.org/coderaiser/putasset  "Build Status"
-[DependencyStatusURL]:      https://gemnasium.com/coderaiser/putasset "Dependency Status"
+[BuildStatusURL]:           https://travis-ci.org/coderaiser/node-putasset  "Build Status"
+[DependencyStatusURL]:      https://gemnasium.com/coderaiser/node-putasset "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 
