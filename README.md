@@ -18,7 +18,7 @@ Options:
 -h, --help     : display this help and exit,
 -v, --version  : output version information and exit,
 -r, --repo     : name of repository,
--o, --owner    : owner of repository,
+-u, --user     : user of repository,
 -t, --tag      : tag of repository (shoul exist!),
 -f, --filename : path to asset
 -tn, --token   : github token <https://github.com/settings/tokens/new>
@@ -55,12 +55,12 @@ Data will be read before execution in next order (left is more important):
 ### Example
 
 ```js
-const release = require('putasset'),
+const putasset = require('putasset'),
 const token = 'token from https://github.com/settings/applications';
 
-release(token, {
-    repo: 'coderaiser',
-    owner: 'putasset',
+putasset(token, {
+    user: 'coderaiser',
+    repo: 'putasset',
     tag: 'v1.0.0',
     filename: 'realease.zip'
 }, (error) => {

@@ -14,7 +14,7 @@ const putasset = require('..'),
             v: 'version',
             h: 'help',
             r: 'repo',
-            o: 'user',
+            u: 'user',
             t: 'tag',
             f: 'filename',
             tn: 'token'
