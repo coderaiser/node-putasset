@@ -1,0 +1,10 @@
+2016.06.27, v1.0.1
+
+fix:
+- (putasset) -o, --owner -> -u, --user
+
+feature:
+- (package) github v2.0.0
+- (package) add coveralls
+- (package) redrun v4.0.0
+
