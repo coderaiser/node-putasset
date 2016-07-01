@@ -2,7 +2,7 @@
 
 'use strict';
 
-const putasset = require('..'),
+const putasset  = require('..'),
     readjson    = require('readjson'),
     check       = require('checkup'),
     exec        = require('execon'),
@@ -76,7 +76,7 @@ function info() {
 }
 
 function help() {
-    const bin = require('../help.json');
+    const bin = require('../help');
     const usage = `Usage: ${info().name} [options]`;
         
     console.log(usage);
