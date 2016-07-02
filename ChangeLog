@@ -1,3 +1,9 @@
+2016.07.02, v1.0.2
+
+fix:
+- (package) add legacy:package, legacy:help
+
+
 2016.06.27, v1.0.1
 
 fix:
