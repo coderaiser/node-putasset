@@ -5,7 +5,7 @@
 const putasset  = require('..'),
     readjson    = require('readjson'),
     check       = require('checkup'),
-    exec        = require('execon'),
+    tryCatch    = require('try-catch'),
     
     argv        = process.argv,
     args        = require('minimist')(argv.slice(2), {
@@ -36,7 +36,7 @@ function main() {
     const tokenPath = path.join(home, '.putasset.json');
     
     let token;
-    const error = exec.try(function() {
+    const error = tryCatch(function() {
         check([
             args.repo,
             args.user,
