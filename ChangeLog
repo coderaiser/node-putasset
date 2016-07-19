@@ -1,3 +1,14 @@
+2016.07.19, v1.0.3
+
+fix:
+- (putasset) exec -> tryCatch
+
+feature:
+- (package) redrun v5.0.0
+- (package) nyc v7.0.0
+- (package) eslint v3.0.0
+
+
 2016.07.02, v1.0.2
 
 fix:
