@@ -1,3 +1,10 @@
+2016.09.16, v1.0.4
+
+feature:
+- (package) github v3.1.0
+- (package) nyc v8.1.0
+
+
 2016.07.19, v1.0.3
 
 fix:
