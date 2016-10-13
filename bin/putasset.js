@@ -54,7 +54,7 @@ function main() {
     if (!error)
         putasset(token, {
             repo: args.repo,
-            user: args.user,
+            owner: args.user,
             tag: args.tag,
             filename: args.filename
         }, log);
