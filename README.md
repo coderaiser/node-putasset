@@ -1,6 +1,6 @@
 # Putasset [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 
-Upload asset to release on github. To create release use [grizzly](https://github.com/coderaiser/node-grizzly "Grizzly").
+Upload asset to release on github.
 
 ## Install
 
@@ -37,16 +37,18 @@ npm i putasset --save
 ### Platforms
 
 When on `node.js >= 6` you can use `putasset` with:
-```
+
+```js
 require('putasset');
 ```
 
 For older versions use:
-```
+
+```js
 require('putasset/legacy');
 ```
 
-Same with globally installed module: `putasset-legacy'.
+Same with globally installed module: `putasset-legacy`.
 
 Data will be read before execution in next order (left is more important):
 
@@ -68,6 +70,10 @@ putasset(token, {
         console.error(error.message);
 });
 ```
+
+## Related
+
+- [grizzly](https://github.com/coderaiser/node-grizzly "Grizzly") - Create release on github with help of node.
 
 ## License
 
