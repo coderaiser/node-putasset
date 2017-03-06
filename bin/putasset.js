@@ -11,13 +11,15 @@ const TOKEN = process.env.PUTASSET_TOKEN;
 
 const argv = process.argv;
 const args = require('minimist')(argv.slice(2), {
-    string: ['repo', 'user', 'tag', 'filename', 'token'],
+    string: ['repo', 'owner', 'tag', 'filename', 'token'],
     boolean: ['loud'],
     alias: {
         v: 'version',
         h: 'help',
         r: 'repo',
-        u: 'user',
+        u: 'owner',
+        user: 'owner',
+        o: 'owner',
         t: 'tag',
         f: 'filename',
         l: 'loud',
@@ -40,24 +42,24 @@ function main() {
     const tokenPath = path.join(home, '.putasset.json');
     
     const repo = args.repo;
-    const user = args.user;
+    const owner = args.owner;
     const tag = args.tag;
     const filename = path.join(process.cwd(), args.filename);
     const name = args.filename;
     
     if (args.loud)
-        console.log(`Uploading file "${name}" to ${user}/${repo}@${tag}`);
+        console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
     
     let token;
     const error = tryCatch(() => {
         check([
             repo,
-            user,
+            owner,
             tag,
             name,
         ], [
             'repo',
-            'user',
+            'owner',
             'tag',
             'filename'
         ]);
@@ -68,7 +70,7 @@ function main() {
     if (!error)
         putasset(token, {
             repo,
-            owner: user,
+            owner,
             tag,
             filename,
         }, log);
