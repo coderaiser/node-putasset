@@ -7,6 +7,8 @@ const readjson = require('readjson');
 const check = require('checkup');
 const tryCatch = require('try-catch');
 
+const TOKEN = process.env.PUTASSET_TOKEN;
+
 const argv = process.argv;
 const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'filename', 'token'],
@@ -48,7 +50,7 @@ function main() {
             'filename'
         ]);
          
-        token = args.token || readjson.sync(tokenPath).token;
+        token = TOKEN || args.token || readjson.sync(tokenPath).token;
     });
     
     if (!error)
