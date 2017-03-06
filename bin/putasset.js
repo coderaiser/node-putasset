@@ -2,26 +2,26 @@
 
 'use strict';
 
-const putasset  = require('..'),
-    readjson    = require('readjson'),
-    check       = require('checkup'),
-    tryCatch    = require('try-catch'),
-    
-    argv        = process.argv,
-    args        = require('minimist')(argv.slice(2), {
-        string: ['repo', 'user', 'tag', 'filename', 'token'],
-        alias: {
-            v: 'version',
-            h: 'help',
-            r: 'repo',
-            u: 'user',
-            t: 'tag',
-            f: 'filename',
-            tn: 'token'
-        }
-    }),
-    
-    argsEmpty   = Object.keys(args).length === 1;
+const putasset = require('..');
+const readjson = require('readjson');
+const check = require('checkup');
+const tryCatch = require('try-catch');
+
+const argv = process.argv;
+const args = require('minimist')(argv.slice(2), {
+    string: ['repo', 'user', 'tag', 'filename', 'token'],
+    alias: {
+        v: 'version',
+        h: 'help',
+        r: 'repo',
+        u: 'user',
+        t: 'tag',
+        f: 'filename',
+        tn: 'token'
+    }
+});
+
+const argsEmpty = Object.keys(args).length === 1;
 
 if (args.version)
     version();
@@ -36,7 +36,7 @@ function main() {
     const tokenPath = path.join(home, '.putasset.json');
     
     let token;
-    const error = tryCatch(function() {
+    const error = tryCatch(() => {
         check([
             args.repo,
             args.user,
