@@ -27,6 +27,7 @@ $ putasset -tn "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
 -f "release.zip"
 ```
+To set token environment variable `PUTASSET_TOKEN` could be used.
 
 ### Local
 
@@ -36,19 +37,13 @@ npm i putasset --save
 
 ### Platforms
 
-When on `node.js >= 6` you can use `putasset` with:
-
-```js
-require('putasset');
-```
-
-For older versions use:
+For old versions of node.js use:
 
 ```js
 require('putasset/legacy');
 ```
 
-Same with globally installed module: `putasset-legacy`.
+For globally installed module: `putasset_`.
 
 Data will be read before execution in next order (left is more important):
 

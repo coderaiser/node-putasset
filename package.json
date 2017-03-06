@@ -5,7 +5,7 @@
   "main": "lib/putasset.js",
   "bin": {
     "putasset": "bin/putasset.js",
-    "putasset-legacy": "legacy/bin/putasset.js"
+    "putasset_": "legacy/bin/putasset.js"
   },
   "babel": {
     "presets": [
