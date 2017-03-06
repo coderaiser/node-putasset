@@ -42,10 +42,11 @@ function main() {
     const repo = args.repo;
     const user = args.user;
     const tag = args.tag;
-    const filename = args.filename;
+    const filename = path.join(process.cwd(), args.filename);
+    const name = args.filename;
     
     if (args.loud)
-        console.log(`Uploading file "${filename}" to ${user}/${repo}@${tag}`);
+        console.log(`Uploading file "${name}" to ${user}/${repo}@${tag}`);
     
     let token;
     const error = tryCatch(() => {
@@ -53,7 +54,7 @@ function main() {
             repo,
             user,
             tag,
-            filename
+            name,
         ], [
             'repo',
             'user',
@@ -66,10 +67,10 @@ function main() {
     
     if (!error)
         putasset(token, {
-            repo: args.repo,
-            owner: args.user,
-            tag: args.tag,
-            filename: args.filename
+            repo,
+            owner,
+            tag,
+            filename,
         }, log);
     
     log(error);
