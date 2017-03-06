@@ -12,6 +12,7 @@ const TOKEN = process.env.PUTASSET_TOKEN;
 const argv = process.argv;
 const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'user', 'tag', 'filename', 'token'],
+    boolean: ['loud'],
     alias: {
         v: 'version',
         h: 'help',
@@ -19,6 +20,7 @@ const args = require('minimist')(argv.slice(2), {
         u: 'user',
         t: 'tag',
         f: 'filename',
+        l: 'loud',
         tn: 'token'
     }
 });
@@ -37,13 +39,22 @@ function main() {
     const path = require('path');
     const tokenPath = path.join(home, '.putasset.json');
     
+    const repo = args.repo;
+    const user = args.user;
+    const tag = args.tag;
+    const filename = args.filename;
+    
+    if (args.loud)
+        console.log(`Uploading file "${filename}" to ${user}/${repo}@${tag}`);
+    
     let token;
     const error = tryCatch(() => {
         check([
-            args.repo,
-            args.user,
-            args.tag,
-            args.filename], [
+            repo,
+            user,
+            tag,
+            filename
+        ], [
             'repo',
             'user',
             'tag',
