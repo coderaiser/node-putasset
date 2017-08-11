@@ -50,6 +50,9 @@ function main() {
     if (args.loud)
         console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
     
+    if (!args.filename)
+        exit('filename could not be empty!');
+    
     let token;
     const error = tryCatch(() => {
         check([
@@ -76,6 +79,11 @@ function main() {
         }, log);
     
     log(error);
+}
+
+function exit(error) {
+    log(error);
+    process.exit(1);
 }
 
 function log(error) {
