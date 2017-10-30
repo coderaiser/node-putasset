@@ -9,10 +9,7 @@
   },
   "babel": {
     "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "transform-object-assign"
+      "env"
     ]
   },
   "scripts": {
@@ -59,9 +56,6 @@
     "try-catch": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-preset-es2015": "^6.9.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
     "mkdirp": "^0.5.1",
@@ -69,5 +63,8 @@
     "nyc": "^11.0.2",
     "redrun": "^5.0.1",
     "tape": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
