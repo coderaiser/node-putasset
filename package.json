@@ -4,13 +4,7 @@
   "description": "upload asset to release on github",
   "main": "lib/putasset.js",
   "bin": {
-    "putasset": "bin/putasset.js",
-    "putasset_": "legacy/bin/putasset.js"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+    "putasset": "bin/putasset.js"
   },
   "scripts": {
     "test": "tape 'test/**/*.js'",
@@ -20,15 +14,7 @@
     "report": "nyc report --reporter=text-lcov | coveralls",
     "eslint:lib": "eslint lib test",
     "eslint:bin": "eslint -c .eslint-bin.rc bin",
-    "lint": "redrun eslint:*",
-    "6to5:lib": "babel lib -d legacy",
-    "6to5:bin": "babel bin -d legacy/bin",
-    "wisdom": "npm run build",
-    "mkdir": "mkdirp legacy/bin",
-    "build": "redrun mkdir 6to5:* legacy:*",
-    "legacy:index": "echo \"module.exports = require('./putasset');\" > legacy/index.js",
-    "legacy:package": "echo \"module.exports = require('../package');\" > legacy/package.js",
-    "legacy:help": "echo \"module.exports = require('../help');\" > legacy/help.js"
+    "lint": "redrun eslint:*"
   },
   "repository": {
     "type": "git",
@@ -56,11 +42,8 @@
     "try-catch": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
-    "mkdirp": "^0.5.1",
     "nodemon": "^1.9.2",
     "nyc": "^11.0.2",
     "redrun": "^5.0.1",

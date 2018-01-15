@@ -36,16 +36,6 @@ To set token environment variable `PUTASSET_TOKEN` could be used.
 npm i putasset --save
 ```
 
-### Platforms
-
-For old versions of node.js use:
-
-```js
-require('putasset/legacy');
-```
-
-For globally installed module: `putasset_`.
-
 Data will be read before execution in next order (left is more important):
 
 `command line -> ~/.putasset.json`
