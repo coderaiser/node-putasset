@@ -37,6 +37,12 @@ else
     main();
 
 function main() {
+    if (args.loud)
+        console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
+    
+    if (!args.filename)
+        exit(Error('filename could not be empty!'));
+    
     const home = require('os-homedir')();
     const path = require('path');
     const tokenPath = path.join(home, '.putasset.json');
@@ -46,12 +52,6 @@ function main() {
     const tag = args.tag;
     const filename = path.join(process.cwd(), args.filename);
     const name = args.filename;
-    
-    if (args.loud)
-        console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
-    
-    if (!args.filename)
-        exit('filename could not be empty!');
     
     let token;
     const error = tryCatch(() => {
