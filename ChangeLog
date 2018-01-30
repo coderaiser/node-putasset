@@ -1,3 +1,9 @@
+2018.01.30, v3.1.4
+
+feature:
+- (package) dependencies: github -> @octokit/rest
+
+
 2018.01.23, v3.1.3
 
 fix:

@@ -1,6 +1,6 @@
 {
   "name": "putasset",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "upload asset to release on github",
   "main": "lib/putasset.js",
   "bin": {
