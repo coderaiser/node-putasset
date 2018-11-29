@@ -15,14 +15,14 @@ npm i putasset -g
 $ putasset
 Usage: putasset [options]
 Options:
--h, --help      : display this help and exit,
--v, --version   : output version information and exit,
--r, --repo      : name of repository,
--o, --owner     : owner of repository,
--t, --tag       : tag of repository (shoul exist!),
--f, --filename  : path to asset
--tn, --token    : github token <https://github.com/settings/tokens/new>
--l, --loud      : output filename, owner, repo and tag before upload
+  -h, --help      : display this help and exit,
+  -v, --version   : output version information and exit,
+  -r, --repo      : name of repository,
+  -o, --owner     : owner of repository,
+  -t, --tag       : tag of repository (shoul exist!),
+  -f, --filename  : path to asset
+  -tn, --token    : github token <https://github.com/settings/tokens/new>
+  -l, --loud      : output filename, owner, repo and tag before upload
 
 $ putasset -tn "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
@@ -51,9 +51,8 @@ putasset(token, {
     repo: 'putasset',
     tag: 'v1.0.0',
     filename: 'realease.zip'
-}, (error) => {
-    if (error)
-        console.error(error.message);
+}).catch((error) => {
+    console.error(error.message);
 });
 ```
 

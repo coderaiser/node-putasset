@@ -3,4 +3,5 @@ node_modules
 npm-debug.log*
 legacy
 yarn-error.log
+*.swp
 

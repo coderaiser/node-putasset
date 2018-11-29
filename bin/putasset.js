@@ -54,7 +54,7 @@ function main() {
         console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
     
     let token;
-    const result = tryCatch(() => {
+    const [e] = tryCatch(() => {
         check([
             repo,
             owner,
@@ -70,17 +70,16 @@ function main() {
         token = TOKEN || args.token || readjson.sync(tokenPath).token;
     });
     
-    const error = result[0]
     
-    if (!error)
-        putasset(token, {
-            repo,
-            owner,
-            tag,
-            filename,
-        }, log);
+    if (e)
+        return log(e);
     
-    log(error);
+    putasset(token, {
+        repo,
+        owner,
+        tag,
+        filename,
+    }).catch(log);
 }
 
 function exit(error) {
