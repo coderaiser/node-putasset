@@ -38,7 +38,6 @@
     "es6-promisify": "^6.0.0",
     "fullstore": "^1.1.0",
     "minimist": "^1.2.0",
-    "os-homedir": "^1.0.0",
     "readjson": "^1.1.0",
     "try-catch": "^2.0.0",
     "wraptile": "^2.0.0"
