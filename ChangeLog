@@ -1,3 +1,13 @@
+2018.11.29, v4.0.0
+
+feature:
+- (package) @octokit/rest v16.1.0
+- (package) nyc v13.1.0
+- (package) eslint v5.9.0
+- (packge) rm os-homedir
+- (package) redrun v7.0.0
+
+
 2018.05.03, v3.1.9
 
 feature:
