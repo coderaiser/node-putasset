@@ -1,8 +1,7 @@
 'use strict';
 
 const tryToCatch = require('try-to-catch');
-const tryTo = require('try-to-tape');
-const test = tryTo(require('tape'));
+const test = require('supertape');
 const putasset = require('..');
 
 const empty = () => {};
