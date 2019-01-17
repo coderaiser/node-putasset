@@ -10,7 +10,7 @@ const tryCatch = require('try-catch');
 const TOKEN = process.env.PUTASSET_TOKEN;
 
 const argv = process.argv;
-const args = require('minimist')(argv.slice(2), {
+const args = require('yargs-parser')(argv.slice(2), {
     string: ['repo', 'owner', 'tag', 'filename', 'token'],
     boolean: ['loud'],
     alias: {
