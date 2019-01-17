@@ -1,3 +1,10 @@
+2019.01.17, v4.1.0
+
+feature:
+- (package) minimist -> yargs-parser
+- (package) tape -> supertape
+
+
 2018.11.30, v4.0.1
 
 fix:
