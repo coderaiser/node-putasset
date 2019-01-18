@@ -73,14 +73,14 @@ function main() {
     
     
     if (e)
-        return log(e);
+        exit(e);
     
     putasset(token, {
         repo,
         owner,
         tag,
         filename,
-    }).catch(log);
+    }).catch(exit);
 }
 
 function exit(error) {
