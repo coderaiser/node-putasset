@@ -19,7 +19,7 @@ Options:
   -v, --version   : output version information and exit,
   -r, --repo      : name of repository,
   -o, --owner     : owner of repository,
-  -t, --tag       : tag of repository (shoul exist!),
+  -t, --tag       : tag of repository (should exist!),
   -f, --filename  : path to asset
   -k, --token    : github token <https://github.com/settings/tokens/new>
   -l, --loud      : output filename, owner, repo and tag before upload
