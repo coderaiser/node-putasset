@@ -18,12 +18,11 @@ const args = require('minimist')(argv.slice(2), {
         h: 'help',
         r: 'repo',
         u: 'owner',
-        user: 'owner',
         o: 'owner',
         t: 'tag',
         f: 'filename',
         l: 'loud',
-        tn: 'token'
+        k: 'token'
     }
 });
 

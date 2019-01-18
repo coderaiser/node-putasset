@@ -5,6 +5,6 @@
     "-o, --owner    ": "owner of repository",
     "-t, --tag      ": "tag of repository (shoul exist!)",
     "-f, --file     ": "path to asset",
-    "-tn, --token   ": "github token <https://github.com/settings/tokens/new>",
+    "-k, --token    ": "github token <https://github.com/settings/tokens/new>",
     "-l, --loud     ": "output filename, repo, owner and tag before upload"
 }

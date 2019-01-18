@@ -21,10 +21,10 @@ Options:
   -o, --owner     : owner of repository,
   -t, --tag       : tag of repository (shoul exist!),
   -f, --filename  : path to asset
-  -tn, --token    : github token <https://github.com/settings/tokens/new>
+  -k, --token    : github token <https://github.com/settings/tokens/new>
   -l, --loud      : output filename, owner, repo and tag before upload
 
-$ putasset -tn "token from url" \
+$ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
 -f "release.zip"
 ```
