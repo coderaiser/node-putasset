@@ -2,6 +2,13 @@
 
 'use strict';
 
+const home = require('os').homedir();
+const {
+    join,
+    basename,
+    isAbsolute,
+} = require('path');
+
 const putasset = require('..');
 const readjson = require('readjson');
 const check = require('checkup');
@@ -12,18 +19,17 @@ const TOKEN = process.env.PUTASSET_TOKEN;
 const argv = process.argv;
 const args = require('yargs-parser')(argv.slice(2), {
     string: ['repo', 'owner', 'tag', 'filename', 'token'],
-    boolean: ['loud'],
+    boolean: ['loud', 'show-url'],
     alias: {
         v: 'version',
         h: 'help',
         r: 'repo',
         u: 'owner',
-        user: 'owner',
         o: 'owner',
         t: 'tag',
         f: 'filename',
         l: 'loud',
-        tn: 'token'
+        k: 'token',
     }
 });
 
@@ -40,14 +46,15 @@ function main() {
     if (!args.filename)
         exit(Error('filename could not be empty!'));
     
-    const home = require('os').homedir();
-    const path = require('path');
-    const tokenPath = path.join(home, '.putasset.json');
+    const tokenPath = join(home, '.putasset.json');
     
-    const repo = args.repo;
-    const owner = args.owner;
-    const tag = args.tag;
-    const filename = path.join(process.cwd(), args.filename);
+    const {
+        repo,
+        owner,
+        tag,
+    } = args;
+    
+    const filename = getFileName(args.filename);
     const name = args.filename;
     
     if (args.loud)
@@ -72,14 +79,35 @@ function main() {
     
     
     if (e)
-        return log(e);
+        exit(e);
     
     putasset(token, {
         repo,
         owner,
         tag,
         filename,
-    }).catch(log);
+    })
+    .then(showUrl)
+    .catch(exit)
+}
+
+function showUrl() {
+    if (!args.showUrl)
+        return;
+    
+    console.log(getURL());
+}
+
+function getURL() {
+    return [
+        'https://github.com',
+        args.owner,
+        args.repo,
+        'releases',
+        'download',
+        args.tag, 
+        basename(args.filename)
+    ].join('/');
 }
 
 function exit(error) {
@@ -103,12 +131,18 @@ function info() {
 function help() {
     const bin = require('../help');
     const usage = `Usage: ${info().name} [options]`;
-        
+    
     console.log(usage);
     console.log('Options:');
     
-    Object.keys(bin).forEach(function(name) {
+    Object.keys(bin).forEach((name) => {
         console.log(`  ${name} ${bin[name]}`);
     });
 }
 
+function getFileName(filename) {
+    if (isAbsolute(filename))
+        return filename;
+    
+    return join(process.cwd(), args.filename);
+}
