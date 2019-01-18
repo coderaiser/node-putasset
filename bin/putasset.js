@@ -47,7 +47,9 @@ function main() {
     const repo = args.repo;
     const owner = args.owner;
     const tag = args.tag;
-    const filename = path.join(process.cwd(), args.filename);
+    const filename = path.isAbsolute(args.filename) ?
+        args.filename :
+        path.join(process.cwd(), args.filename);
     const name = args.filename;
     
     if (args.loud)
