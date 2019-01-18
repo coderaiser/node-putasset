@@ -27,7 +27,10 @@ Options:
 $ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
 -f "release.zip"
+
+#Expected output: https://github.com/coderaiser/putasset/releases/download/v1.0.0/releases.zip ( download url )
 ```
+
 To set token environment variable `PUTASSET_TOKEN` could be used.
 
 ### Local
@@ -53,6 +56,8 @@ putasset(token, {
     filename: 'realease.zip'
 }).catch((error) => {
     console.error(error.message);
+}).then((url) => {
+    console.log(`Upload success, download url: ${url}`);
 });
 ```
 

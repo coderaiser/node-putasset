@@ -80,7 +80,7 @@ function main() {
         owner,
         tag,
         filename,
-    }).catch(exit);
+    }).catch(exit).then(url=> console.log(url));
 }
 
 function exit(error) {
