@@ -6,5 +6,6 @@
     "-t, --tag      ": "tag of repository (should exist!)",
     "-f, --file     ": "path to asset",
     "-k, --token    ": "github token <https://github.com/settings/tokens/new>",
-    "-l, --loud     ": "output filename, repo, owner and tag before upload"
+    "-l, --loud     ": "output filename, repo, owner and tag before upload",
+    "--force        ": "Overwrite asset if one with same name already present"
 }

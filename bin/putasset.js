@@ -12,7 +12,7 @@ const TOKEN = process.env.PUTASSET_TOKEN;
 const argv = process.argv;
 const args = require('minimist')(argv.slice(2), {
     string: ['repo', 'owner', 'tag', 'filename', 'token'],
-    boolean: ['loud'],
+    boolean: ['loud', 'force'],
     alias: {
         v: 'version',
         h: 'help',
@@ -80,6 +80,7 @@ function main() {
         owner,
         tag,
         filename,
+        'force': args.force
     }).catch(exit).then(url=> console.log(url));
 }
 
