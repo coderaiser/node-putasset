@@ -28,7 +28,7 @@ Options:
 
 $ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
--f "release.zip" -- show url
+-f "release.zip" --show url
 
 https://github.com/coderaiser/putasset/releases/download/v1.0.0/releases.zip
 ```
