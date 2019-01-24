@@ -24,6 +24,7 @@ Options:
   -k, --token     github token <https://github.com/settings/tokens/new>
   -l, --loud      output filename, repo, owner and tag before upload
   --show-url      show asset url
+  --force         overwrite asset if one with same name already exist
 
 $ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \

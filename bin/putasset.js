@@ -18,7 +18,7 @@ const TOKEN = process.env.PUTASSET_TOKEN;
 const argv = process.argv;
 const args = require('yargs-parser')(argv.slice(2), {
     string: ['repo', 'owner', 'tag', 'filename', 'token'],
-    boolean: ['loud', 'show-url'],
+    boolean: ['loud', 'show-url', 'force'],
     alias: {
         v: 'version',
         h: 'help',
@@ -51,6 +51,7 @@ function main() {
         repo,
         owner,
         tag,
+        force,
     } = args;
     
     const filename = getFileName(args.filename);
@@ -84,6 +85,7 @@ function main() {
         owner,
         tag,
         filename,
+        force,
     })
         .then(showUrl)
         .catch(exit);
