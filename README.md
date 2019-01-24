@@ -23,7 +23,6 @@ Options:
   -f, --file      path to asset
   -k, --token     github token <https://github.com/settings/tokens/new>
   -l, --loud      output filename, repo, owner and tag before upload
-  --force         Overwrite asset if one with same name already present
 
 $ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
@@ -55,7 +54,6 @@ putasset(token, {
     repo: 'putasset',
     tag: 'v1.0.0',
     filename: 'realease.zip',
-    force: true
 }).catch((error) => {
     console.error(error.message);
 }).then((url) => {
