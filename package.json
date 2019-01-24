@@ -12,9 +12,9 @@
     "watch:test": "npm run watch -- npm test",
     "coverage": "nyc npm test",
     "report": "nyc report --reporter=text-lcov | coveralls",
-    "eslint:lib": "eslint lib test",
-    "eslint:bin": "eslint -c .eslint-bin.rc bin",
-    "lint": "redrun eslint:*",
+    "lint:lib": "eslint lib test",
+    "lint:bin": "eslint -c .eslint-bin.rc bin",
+    "lint": "redrun lint:*",
     "test:run": "bin/putasset.js --filename ./README.md --repo node-putasset --owner coderaiser --tag \"v`version`\""
   },
   "repository": {

@@ -5,8 +5,7 @@
 const home = require('os').homedir();
 const {
     join,
-    basename,
-    isAbsolute,
+    isAbsolute
 } = require('path');
 
 const putasset = require('..');
@@ -73,10 +72,9 @@ function main() {
             'tag',
             'filename'
         ]);
-         
+        
         token = TOKEN || args.token || readjson.sync(tokenPath).token;
     });
-    
     
     if (e)
         exit(e);
@@ -87,27 +85,15 @@ function main() {
         tag,
         filename,
     })
-    .then(showUrl)
-    .catch(exit)
+        .then(showUrl)
+        .catch(exit);
 }
 
-function showUrl() {
+function showUrl(url) {
     if (!args.showUrl)
         return;
     
-    console.log(getURL());
-}
-
-function getURL() {
-    return [
-        'https://github.com',
-        args.owner,
-        args.repo,
-        'releases',
-        'download',
-        args.tag, 
-        basename(args.filename)
-    ].join('/');
+    console.log(url);
 }
 
 function exit(error) {

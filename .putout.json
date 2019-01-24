@@ -1,0 +1,8 @@
+{
+    "match": {
+        "bin": {
+            "remove-console": false,
+            "remove-process-exit": false
+        }
+    }
+}

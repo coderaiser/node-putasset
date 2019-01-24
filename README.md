@@ -23,12 +23,13 @@ Options:
   -f, --file      path to asset
   -k, --token     github token <https://github.com/settings/tokens/new>
   -l, --loud      output filename, repo, owner and tag before upload
+  --show-url      show asset url
 
 $ putasset -k "token from url" \
 -r putasset -o coderaiser -t v1.0.0 \
--f "release.zip"
+-f "release.zip" -- show url
 
-#Expected output: https://github.com/coderaiser/putasset/releases/download/v1.0.0/releases.zip ( download url )
+https://github.com/coderaiser/putasset/releases/download/v1.0.0/releases.zip
 ```
 
 To set token environment variable `PUTASSET_TOKEN` could be used.
@@ -54,10 +55,10 @@ putasset(token, {
     repo: 'putasset',
     tag: 'v1.0.0',
     filename: 'realease.zip',
-}).catch((error) => {
-    console.error(error.message);
 }).then((url) => {
     console.log(`Upload success, download url: ${url}`);
+}).catch((error) => {
+    console.error(error.message);
 });
 ```
 
