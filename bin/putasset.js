@@ -15,7 +15,7 @@ const tryCatch = require('try-catch');
 
 const TOKEN = process.env.PUTASSET_TOKEN;
 
-const argv = process.argv;
+const {argv} = process;
 const args = require('yargs-parser')(argv.slice(2), {
     string: ['repo', 'owner', 'tag', 'filename', 'token'],
     boolean: ['loud', 'show-url', 'force'],
