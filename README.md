@@ -20,7 +20,7 @@ Options:
   -r, --repo      name of repository
   -o, --owner     owner of repository
   -t, --tag       tag of repository (should exist!)
-  -f, --file      path to asset
+  -f, --filename  path to asset
   -k, --token     github token <https://github.com/settings/tokens/new>
   -l, --loud      output filename, repo, owner and tag before upload
   --show-url      show asset url
@@ -79,4 +79,3 @@ MIT
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/node-putasset  "Build Status"
 [DependencyStatusURL]:      https://david-dm.org/coderaiser/node-putasset "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
-
