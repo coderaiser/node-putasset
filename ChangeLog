@@ -1,3 +1,13 @@
+2019.04.02, v4.3.2
+
+fix:
+- (putasset)  filename flag on readme and help (#5)
+
+feature:
+- (package) yargs-parser v13.0.0
+- (package) madrun v2.1.2
+
+
 2019.01.24, v4.3.1
 
 fix:
