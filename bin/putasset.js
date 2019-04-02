@@ -5,7 +5,7 @@
 const home = require('os').homedir();
 const {
     join,
-    isAbsolute
+    isAbsolute,
 } = require('path');
 
 const putasset = require('..');
@@ -29,7 +29,7 @@ const args = require('yargs-parser')(argv.slice(2), {
         f: 'filename',
         l: 'loud',
         k: 'token',
-    }
+    },
 });
 
 const argsEmpty = Object.keys(args).length === 1;
@@ -71,7 +71,7 @@ function main() {
             'repo',
             'owner',
             'tag',
-            'filename'
+            'filename',
         ]);
         
         token = TOKEN || args.token || readjson.sync(tokenPath).token;

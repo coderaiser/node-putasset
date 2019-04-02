@@ -7,15 +7,17 @@
     "putasset": "bin/putasset.js"
   },
   "scripts": {
-    "test": "tape 'test/**/*.js'",
-    "watch": "nodemon --watch lib --watch test -d 0.3 --exec",
-    "watch:test": "npm run watch -- npm test",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "lint:lib": "eslint lib test",
-    "lint:bin": "eslint -c .eslint-bin.rc bin",
-    "lint": "redrun lint:*",
-    "test:run": "bin/putasset.js --filename ./README.md --repo node-putasset --owner coderaiser --tag \"v`version`\""
+    "test": "madrun test",
+    "watch": "madrun watch",
+    "watch:test": "madrun watch:test",
+    "coverage": "madrun coverage",
+    "report": "madrun report",
+    "lint:lib": "madrun lint:lib",
+    "lint:bin": "madrun lint:bin",
+    "lint": "madrun lint",
+    "putout": "madrun putout",
+    "fix:lint": "madrun fix:lint",
+    "test:run": "madrun test:run"
   },
   "repository": {
     "type": "git",
@@ -48,7 +50,6 @@
     "eslint-plugin-node": "^8.0.1",
     "nodemon": "^1.9.2",
     "nyc": "^13.1.0",
-    "redrun": "^7.0.0",
     "supertape": "^1.2.1",
     "try-to-tape": "^1.1.0",
     "version-io": "^2.0.1"
