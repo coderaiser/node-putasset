@@ -44,10 +44,10 @@
     "yargs-parser": "^13.0.0"
   },
   "devDependencies": {
-    "@putout/eslint-config": "^1.1.0",
     "coveralls": "^3.0.0",
     "eslint": "^6.2.2",
     "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-putout": "^2.0.0",
     "madrun": "^2.1.2",
     "nodemon": "^1.9.2",
     "nyc": "^14.1.1",
