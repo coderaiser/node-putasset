@@ -1,3 +1,14 @@
+2019.08.28, v4.3.3
+
+fix:
+- (remove-asset) result.data -> result
+
+feature:
+- (package) eslint-plugin-node v9.1.0
+- (package) eslint v6.2.2
+- (package) nyc v14.1.1
+
+
 2019.04.02, v4.3.2
 
 fix:
