@@ -1,3 +1,18 @@
+2020.01.07, v5.0.0
+
+feature:
+- (putasset) drop support of node < 10
+- (package) rm unused version-io
+- (package) nodemon v2.0.2
+- (package) version-io v3.0.0
+- (package) eslint-plugin-node v11.0.0
+- (package) eslint-plugin-putout v3.2.0
+- (package) try-to-catch v2.0.1
+- (package) yargs-parser v16.1.0
+- (package) nyc v15.0.0
+- (package) madrun v5.4.1
+
+
 2019.08.28, v4.3.3
 
 fix:
