@@ -41,7 +41,7 @@
     "readjson": "^1.1.0",
     "try-catch": "^2.0.0",
     "try-to-catch": "^1.1.1",
-    "yargs-parser": "^13.0.0"
+    "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
