@@ -52,8 +52,7 @@
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
     "supertape": "^1.2.1",
-    "try-to-tape": "^1.1.0",
-    "version-io": "^3.0.0"
+    "try-to-tape": "^1.1.0"
   },
   "engines": {
     "node": ">=8.3.0"

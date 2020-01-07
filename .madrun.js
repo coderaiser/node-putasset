@@ -8,9 +8,8 @@ module.exports = {
     'watch:test': () => run('watch', 'npm test'),
     'coverage': () => 'nyc npm test',
     'report': () => 'nyc report --reporter=text-lcov | coveralls',
-    'lint': () => 'putout bin lib test madrun.js',
+    'lint': () => 'putout bin lib test .madrun.js',
     'fix:lint': () => run('lint', '--fix'),
-    'putout': () => 'putout lib test madrun.js',
     'test:run': () => 'bin/putasset.js --filename ./README.md --repo node-putasset --owner coderaiser --tag "v`version`"',
 };
 
