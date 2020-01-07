@@ -40,7 +40,7 @@
     "mime-types": "^2.1.21",
     "readjson": "^1.1.0",
     "try-catch": "^2.0.0",
-    "try-to-catch": "^1.1.1",
+    "try-to-catch": "^2.0.1",
     "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
