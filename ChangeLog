@@ -1,3 +1,9 @@
+2020.02.19, v5.0.2
+
+feature:
+- (putasset) uploadReleaseAsset: file -> data
+
+
 2020.02.19, v5.0.1
 
 feature:
