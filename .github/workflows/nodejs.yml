@@ -36,3 +36,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: typos-action
         uses: crate-ci/typos@v1.0.4
+        with:
+          files: ./README.md
