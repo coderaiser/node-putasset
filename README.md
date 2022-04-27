@@ -7,7 +7,7 @@
 [BuildStatusURL]: https://github.com/coderaiser/node-putasset/actions?query=workflow%3A%22Node+CI%22 "Build Status"
 [BuildStatusIMGURL]: https://github.com/coderaiser/node-putasset/workflows/Node%20CI/badge.svg
 
-Upload asset to release on github.
+Upload an asset to releases on GitHub.
 
 ## Install
 

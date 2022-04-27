@@ -2,7 +2,7 @@
   "name": "putasset",
   "version": "6.0.0",
   "type": "commonjs",
-  "description": "upload asset to release on github",
+  "description": "Upload an asset to releases on GitHub",
   "main": "lib/putasset.js",
   "bin": {
     "putasset": "bin/putasset.js"
