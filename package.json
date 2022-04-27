@@ -44,7 +44,6 @@
     "yargs-parser": "^18.1.1"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0",
     "eslint": "^8.14.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^15.1.1",
