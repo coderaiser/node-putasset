@@ -59,17 +59,14 @@ Data will be read before execution in next order (left is more important):
 const putasset = require('putasset');
 const token = 'token from https://github.com/settings/applications';
 
-putasset(token, {
+const url = await putasset(token, {
     owner: 'coderaiser',
     repo: 'putasset',
     tag: 'v1.0.0',
     filename: 'realease.zip',
-}).then((url) => {
-    console.log(`Upload success, download url: ${url}`);
-})
-    .catch((error) => {
-        console.error(error.message);
-    });
+});
+
+console.log(`Upload success, download url: ${url}`);
 ```
 
 ## Related
