@@ -51,7 +51,7 @@
     "madrun": "^5.4.1",
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
-    "putout": "^7.13.1",
+    "putout": "^25.15.1",
     "supertape": "^1.2.1"
   },
   "engines": {
