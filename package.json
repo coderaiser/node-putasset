@@ -36,7 +36,7 @@
     "url": "https://github.com/coderaiser/node-putasset/issues"
   },
   "dependencies": {
-    "@octokit/rest": "^17.1.3",
+    "@octokit/rest": "^18.12.0",
     "checkup": "^1.3.0",
     "mime-types": "^2.1.21",
     "readjson": "^2.0.1",
@@ -45,12 +45,12 @@
     "yargs-parser": "^21.0.1"
   },
   "devDependencies": {
+    "c8": "^7.11.2",
     "eslint": "^8.14.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^15.1.1",
     "madrun": "^9.0.2",
     "nodemon": "^2.0.2",
-    "nyc": "^15.0.0",
     "putout": "^25.15.1",
     "supertape": "^7.2.3"
   },
