@@ -55,7 +55,7 @@
     "supertape": "^7.2.3"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public"
