@@ -49,7 +49,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^25.1.2",
-    "madrun": "^9.0.2",
+    "madrun": "^10.2.5",
     "nodemon": "^2.0.2",
     "putout": "^38.5.3",
     "supertape": "^10.10.0"
