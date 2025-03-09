@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 
-'use strict';
+import {join, isAbsolute} from 'node:path';
+import process from 'node:process';
+import nodeOs from 'node:os';
+import {createRequire} from 'node:module';
+import readjson from 'readjson';
+import check from 'checkup';
+import tryCatch from 'try-catch';
+import yargsParser from 'yargs-parser';
+import putasset from '../lib/putasset.js';
 
-const {join, isAbsolute} = require('node:path');
-
-const process = require('node:process');
-const readjson = require('readjson');
-const check = require('checkup');
-const tryCatch = require('try-catch');
-const putasset = require('..');
-
+const info = () => require('../package');
+const require = createRequire(import.meta.url);
 const {argv} = process;
-
-const args = require('yargs-parser')(argv.slice(2), {
+const args = yargsParser(argv.slice(2), {
     string: [
         'repo',
         'owner',
@@ -37,9 +38,8 @@ const args = require('yargs-parser')(argv.slice(2), {
         k: 'token',
     },
 });
-
 const TOKEN = process.env.PUTASSET_TOKEN;
-const home = require('node:os').homedir();
+const home = nodeOs.homedir();
 const argsEmpty = Object.keys(args).length === 1;
 
 if (args.version)
@@ -120,8 +120,6 @@ function log(error) {
 function version() {
     console.log('v' + info().version);
 }
-
-const info = () => require('../package');
 
 function help() {
     const bin = require('../help');

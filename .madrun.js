@@ -1,8 +1,6 @@
-'use strict';
+import {run} from 'madrun';
 
-const {run} = require('madrun');
-
-module.exports = {
+export default {
     'test': () => `tape 'test/**/*.js'`,
     'watch': () => 'nodemon --watch lib --watch test -d 0.3 --exec',
     'watch:test': () => run('watch', 'npm test'),
@@ -12,4 +10,3 @@ module.exports = {
     'fix:lint': () => run('lint', '--fix'),
     'test:run': () => 'bin/putasset.js --filename ./README.md --repo node-putasset --owner coderaiser --tag "v`version`"',
 };
-

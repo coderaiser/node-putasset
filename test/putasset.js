@@ -1,8 +1,6 @@
-'use strict';
-
-const tryToCatch = require('try-to-catch');
-const test = require('supertape');
-const putasset = require('..');
+import tryToCatch from 'try-to-catch';
+import test from 'supertape';
+import putasset from '../lib/putasset.js';
 
 const empty = () => {};
 
@@ -11,7 +9,11 @@ const repo = 'putasset';
 const tag = 'v1.0.0';
 
 test('arguments: token', async (t) => {
-    const [e] = await tryToCatch(putasset, 123, {owner, repo, tag});
+    const [e] = await tryToCatch(putasset, 123, {
+        owner,
+        repo,
+        tag,
+    });
     
     t.equal(e.message, 'token must be a string!', 'should throw when token not string');
     t.end();
@@ -44,4 +46,3 @@ test('arguments: filename', async (t) => {
     t.equal(e.message, 'filename must be a string!', 'should throw when filename not string');
     t.end();
 });
-
