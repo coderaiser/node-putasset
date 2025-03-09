@@ -34,14 +34,12 @@ Options:
   --show-url      show asset url
   --force         overwrite asset if one with same name already exist
 
-$ putasset -k "token from url" \
+$ PUTASSET_TOKEN="token" putasset \
 -r putasset -o coderaiser -t v1.0.0 \
--f "release.zip" --show url
+-f release.zip --show url
 
 https://github.com/coderaiser/putasset/releases/download/v1.0.0/releases.zip
 ```
-
-To set token environment variable `PUTASSET_TOKEN` could be used.
 
 ### Local
 
@@ -56,7 +54,7 @@ Data will be read before execution in next order (left is more important):
 ### Example
 
 ```js
-const putasset = require('putasset');
+import putasset from 'putasset';
 const token = 'token from https://github.com/settings/applications';
 
 const url = await putasset(token, {
