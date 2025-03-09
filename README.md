@@ -65,7 +65,7 @@ const url = await putasset(token, {
     filename: 'realease.zip',
 });
 
-console.log(`Upload success, download url: ${url}`);
+console.log(`✅ Upload successfull, download url: ${url}`);
 ```
 
 ## Related
