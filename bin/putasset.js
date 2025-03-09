@@ -13,6 +13,7 @@ import putasset from '../lib/putasset.js';
 const info = () => require('../package');
 const require = createRequire(import.meta.url);
 const {argv} = process;
+
 const args = yargsParser(argv.slice(2), {
     string: [
         'repo',
@@ -38,6 +39,7 @@ const args = yargsParser(argv.slice(2), {
         k: 'token',
     },
 });
+
 const TOKEN = process.env.PUTASSET_TOKEN;
 const home = nodeOs.homedir();
 const argsEmpty = Object.keys(args).length === 1;

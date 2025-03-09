@@ -55,6 +55,7 @@ Data will be read before execution in next order (left is more important):
 
 ```js
 import putasset from 'putasset';
+
 const token = 'token from https://github.com/settings/applications';
 
 const url = await putasset(token, {
