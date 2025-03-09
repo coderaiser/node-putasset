@@ -2,23 +2,29 @@
 
 'use strict';
 
-const home = require('os').homedir();
-const {
-    join,
-    isAbsolute,
-} = require('path');
+const {join, isAbsolute} = require('node:path');
 
-const putasset = require('..');
+const process = require('node:process');
 const readjson = require('readjson');
 const check = require('checkup');
 const tryCatch = require('try-catch');
-
-const TOKEN = process.env.PUTASSET_TOKEN;
+const putasset = require('..');
 
 const {argv} = process;
+
 const args = require('yargs-parser')(argv.slice(2), {
-    string: ['repo', 'owner', 'tag', 'filename', 'token'],
-    boolean: ['loud', 'show-url', 'force'],
+    string: [
+        'repo',
+        'owner',
+        'tag',
+        'filename',
+        'token',
+    ],
+    boolean: [
+        'loud',
+        'show-url',
+        'force',
+    ],
     alias: {
         v: 'version',
         h: 'help',
@@ -32,6 +38,8 @@ const args = require('yargs-parser')(argv.slice(2), {
     },
 });
 
+const TOKEN = process.env.PUTASSET_TOKEN;
+const home = require('node:os').homedir();
 const argsEmpty = Object.keys(args).length === 1;
 
 if (args.version)
@@ -61,6 +69,7 @@ function main() {
         console.log(`Uploading file "${name}" to ${owner}/${repo}@${tag}`);
     
     let token;
+    
     const [e] = tryCatch(() => {
         check([
             repo,
@@ -112,9 +121,7 @@ function version() {
     console.log('v' + info().version);
 }
 
-function info() {
-    return require('../package');
-}
+const info = () => require('../package');
 
 function help() {
     const bin = require('../help');
